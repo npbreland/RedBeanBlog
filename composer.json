@@ -1,0 +1,18 @@
+{
+    "name": "nick/redbean-blog",
+    "require": {
+        "gabordemooij/redbean": "^5.7",
+        "phroute/phroute": "^2.2",
+        "symfony/validator": "^5.4"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.20",
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Nick Breland",
+            "email": "npbreland@tutanota.com"
+        }
+    ]
+}
