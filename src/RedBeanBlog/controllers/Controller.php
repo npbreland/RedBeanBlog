@@ -3,7 +3,7 @@
 namespace RedBeanBlog\Controller;
 
 use RedBeanPHP\R as R;
-use RedBeanBlog\Exception\Exception404;
+use Phroute\Phroute\Exception\HttpException;
 
 class Controller
 {
@@ -13,7 +13,8 @@ class Controller
     {
         $bean = R::load( $this->type, $id );
         if ($bean->id === 0) {
-            throw new Exception404(ucfirst($this->type) . " $id not found.");
+            $msg = ucfirst($this->type) . " $id not found.";
+            throw new HttpException($msg, 404);
         }
         return $bean;
     }
